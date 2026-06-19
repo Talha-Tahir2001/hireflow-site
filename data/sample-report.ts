@@ -1,0 +1,183 @@
+export const hireFlowOutput = {
+    jobAnalysis: {
+        title: "Senior Backend Engineer",
+        rubric: [
+            { category: "Technical Skills", weight: 40, maxScore: 40 },
+            { category: "System Design", weight: 20, maxScore: 20 },
+            { category: "Leadership", weight: 15, maxScore: 15 },
+            { category: "Communication", weight: 15, maxScore: 15 },
+            { category: "Culture Fit", weight: 10, maxScore: 10 },
+        ],
+        senioritySignals: ["5+ years backend experience", "Distributed systems", "Mentorship track record"],
+        redFlags: ["No team experience", "Job hopping", "Vague project descriptions"],
+    },
+    candidates: [
+        {
+            id: "c1",
+            name: "Alex Chen",
+            initials: "AC",
+            role: "Senior Backend Engineer",
+            scores: {
+                "Technical Skills": 36,
+                "System Design": 18,
+                "Leadership": 13,
+                "Communication": 14,
+                "Culture Fit": 9,
+            },
+            totalScore: 90,
+            maxTotal: 100,
+            rank: 1,
+            strengths: [
+                "Built real-time messaging system handling 1M+ concurrent connections",
+                "Led migration from monolith to microservices at Stripe",
+                "Mentored 4 junior engineers to senior level",
+            ],
+            gaps: [
+                "Limited experience with GraphQL (used REST primarily)",
+                "No formal tech lead title despite leadership work",
+            ],
+            recommendation: "Strong Hire",
+            recommendationColor: "green",
+        },
+        {
+            id: "c2",
+            name: "Priya Sharma",
+            initials: "PS",
+            role: "Senior Backend Engineer",
+            scores: {
+                "Technical Skills": 34,
+                "System Design": 16,
+                "Leadership": 11,
+                "Communication": 13,
+                "Culture Fit": 9,
+            },
+            totalScore: 83,
+            maxTotal: 100,
+            rank: 2,
+            strengths: [
+                "Designed payment processing pipeline at Square",
+                "Strong in Go and Rust with production experience",
+                "Active open source contributor (3K+ GitHub stars)",
+            ],
+            gaps: [
+                "Less experience with large-scale distributed systems",
+                "Limited mentorship experience",
+            ],
+            recommendation: "Hire",
+            recommendationColor: "blue",
+        },
+        {
+            id: "c3",
+            name: "Jordan Taylor",
+            initials: "JT",
+            role: "Senior Backend Engineer",
+            scores: {
+                "Technical Skills": 28,
+                "System Design": 14,
+                "Leadership": 10,
+                "Communication": 12,
+                "Culture Fit": 8,
+            },
+            totalScore: 72,
+            maxTotal: 100,
+            rank: 3,
+            strengths: [
+                "Solid Python fundamentals",
+                "Good problem-solving approach in interviews",
+            ],
+            gaps: [
+                "No production distributed systems experience",
+                "Weak system design depth — struggled with scaling discussion",
+                "Limited leadership evidence",
+            ],
+            recommendation: "No Hire",
+            recommendationColor: "red",
+        },
+    ],
+    interviewPacks: [
+        {
+            candidateId: "c1",
+            candidateName: "Alex Chen",
+            questions: [
+                {
+                    topic: "System Design Validation",
+                    duration: "20 min",
+                    question: "Design a rate-limited API gateway that handles 100K RPS. Walk through your approach to rate limiting, caching, and fault tolerance.",
+                    focus: "Validate claimed experience with 1M+ concurrent connections",
+                },
+                {
+                    topic: "Leadership Deep-Dive",
+                    duration: "15 min",
+                    question: "Tell me about a time you had to push back on a product decision that would have created significant technical debt.",
+                    focus: "Confirm mentorship and cross-functional influence",
+                },
+                {
+                    topic: "Technical Gap Exploration",
+                    duration: "10 min",
+                    question: "You mentioned limited GraphQL experience. How would you approach migrating a REST API to GraphQL while maintaining backward compatibility?",
+                    focus: "Assess learning agility and architectural thinking",
+                },
+            ],
+            interviewerNotes: [
+                "Watch for: communication clarity under pressure",
+                "Strength to validate: mentorship impact on team growth",
+                "Gap to explore: GraphQL learning curve",
+            ],
+        },
+        {
+            candidateId: "c2",
+            candidateName: "Priya Sharma",
+            questions: [
+                {
+                    topic: "Distributed Systems",
+                    duration: "20 min",
+                    question: "Design a distributed transaction system for a payment platform. How do you handle consistency across services?",
+                    focus: "Validate payment pipeline experience",
+                },
+                {
+                    topic: "Open Source & Community",
+                    duration: "15 min",
+                    question: "Tell me about a time you had to resolve a contentious issue in your open source project with conflicting community feedback.",
+                    focus: "Assess communication and conflict resolution",
+                },
+                {
+                    topic: "Growth Areas",
+                    duration: "10 min",
+                    question: "How would you approach mentoring a junior engineer on your team for the first time?",
+                    focus: "Explore leadership potential despite limited formal experience",
+                },
+            ],
+            interviewerNotes: [
+                "Strong in Go/Rust — probe depth vs breadth",
+                "Open source work shows initiative",
+                "Mentorship gap may be addressable with coaching",
+            ],
+        },
+    ],
+    decisionReport: {
+        summary: "After evaluating 47 resumes against a structured rubric and conducting interviews with the top 3 candidates, Alex Chen emerges as the strongest fit for the Senior Backend Engineer role.",
+        topRecommendation: {
+            name: "Alex Chen",
+            score: 90,
+            rationale: "Validated technical depth in distributed systems, demonstrated leadership through concrete mentorship outcomes, and showed strong communication under pressure. Minor gap in GraphQL is addressable.",
+        },
+        comparisonMatrix: [
+            { candidate: "Alex Chen", technical: 36, systemDesign: 18, leadership: 13, communication: 14, cultureFit: 9, total: 90 },
+            { candidate: "Priya Sharma", technical: 34, systemDesign: 16, leadership: 11, communication: 13, cultureFit: 9, total: 83 },
+            { candidate: "Jordan Taylor", technical: 28, systemDesign: 14, leadership: 10, communication: 12, cultureFit: 8, total: 72 },
+        ],
+        auditTrail: [
+            { step: "Job Description Analyzed", timestamp: "2026-06-15 09:00 UTC", agent: "Job Analyzer" },
+            { step: "47 Resumes Screened", timestamp: "2026-06-15 09:30 UTC", agent: "Resume Screener" },
+            { step: "Top 3 Candidates Selected", timestamp: "2026-06-15 10:00 UTC", agent: "Resume Screener" },
+            { step: "Interview Packs Generated", timestamp: "2026-06-15 10:15 UTC", agent: "Interview Planner" },
+            { step: "Interviews Completed", timestamp: "2026-06-18 16:00 UTC", agent: "Interview Planner" },
+            { step: "Final Report Compiled", timestamp: "2026-06-18 17:30 UTC", agent: "Decision Summarizer" },
+        ],
+        nextSteps: [
+            "Extend offer to Alex Chen (priority candidate)",
+            "Keep Priya Sharma as backup — strong technical profile, mentorship gap addressable",
+            "Send structured feedback to Jordan Taylor with growth recommendations",
+        ],
+    },
+};
