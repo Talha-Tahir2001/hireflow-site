@@ -10,7 +10,7 @@ const steps = [
         title: "Job Analyzer",
         description: "Parses raw job descriptions into weighted scoring rubrics, seniority signals, and red flag detection.",
         icon: FileText,
-        color: "bg-amber-50 text-amber-600 border-amber-200",
+        color: "bg-secondary/10 text-secondary border-secondary/20",
         output: "Structured rubric with explicit criteria",
     },
     {
@@ -26,7 +26,7 @@ const steps = [
         title: "Interview Planner",
         description: "Generates tailored interview question packs based on each candidate's specific strengths and gaps.",
         icon: MessageSquare,
-        color: "bg-emerald-50 text-emerald-600 border-emerald-200",
+        color: "bg-accent/10 text-accent border-accent/20",
         output: "Custom question packs per candidate",
     },
     {
@@ -34,7 +34,7 @@ const steps = [
         title: "Decision Summarizer",
         description: "Produces the final hiring report with recommendations, comparisons, audit trail, and next steps.",
         icon: ClipboardCheck,
-        color: "bg-violet-50 text-violet-600 border-violet-200",
+        color: "bg-muted text-muted-foreground border-border",
         output: "Final report + audit trail",
     },
 ];
@@ -61,7 +61,7 @@ export function PipelineSection() {
 
                 <div className="relative mx-auto max-w-5xl">
                     {/* Connecting line */}
-                    <div className="absolute left-1/2 top-0 hidden h-full w-0.5 -translate-x-1/2 bg-gradient-to-b from-amber-200 via-blue-200 to-violet-200 lg:block" />
+                    <div className="absolute left-1/2 top-0 hidden h-full w-0.5 -translate-x-1/2 bg-gradient-to-b from-secondary via-primary to-accent lg:block" />
 
                     <div className="space-y-8 lg:space-y-12">
                         {steps.map((step, index) => (
@@ -75,13 +75,13 @@ export function PipelineSection() {
                                     }`}
                             >
                                 {/* Step number on line */}
-                                <div className="absolute left-1/2 top-1/2 hidden h-10 w-10 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-white text-sm font-bold text-foreground shadow-md ring-2 ring-slate-200 lg:flex">
+                                <div className="absolute left-1/2 top-1/2 hidden h-10 w-10 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-background text-sm font-bold text-foreground shadow-md ring-2 ring-border lg:flex">
                                     {step.id}
                                 </div>
 
                                 {/* Card */}
                                 <div className={`w-full lg:w-[calc(50%-2rem)] ${index % 2 === 0 ? "lg:pr-0" : "lg:pl-0"}`}>
-                                    <Card className="border-l-4 border-l-transparent hover:shadow-lg transition-shadow duration-300" style={{ borderLeftColor: step.id === 1 ? '#f59e0b' : step.id === 2 ? '#2563eb' : step.id === 3 ? '#10b981' : '#8b5cf6' }}>
+                                    <Card className="border-l-4 hover:shadow-lg transition-shadow duration-300 border-l-primary">
                                         <CardContent className="p-6">
                                             <div className="flex items-start gap-4">
                                                 <div className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-xl ${step.color}`}>

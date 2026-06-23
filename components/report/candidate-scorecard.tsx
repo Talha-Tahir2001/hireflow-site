@@ -80,28 +80,28 @@ export function CandidateScorecard({ candidate, rubric }: CandidateScorecardProp
                 {/* Strengths & Gaps */}
                 <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
                     <div>
-                        <h4 className="mb-3 flex items-center gap-2 text-sm font-semibold text-emerald-700 uppercase tracking-wider">
+                        <h4 className="mb-3 flex items-center gap-2 text-sm font-semibold text-primary uppercase tracking-wider">
                             <TrendingUp className="h-4 w-4" />
                             Strengths
                         </h4>
                         <ul className="space-y-2">
                             {candidate.strengths.map((strength, i) => (
                                 <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
-                                    <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-emerald-500" />
+                                    <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
                                     {strength}
                                 </li>
                             ))}
                         </ul>
                     </div>
                     <div>
-                        <h4 className="mb-3 flex items-center gap-2 text-sm font-semibold text-amber-700 uppercase tracking-wider">
+                        <h4 className="mb-3 flex items-center gap-2 text-sm font-semibold text-destructive uppercase tracking-wider">
                             <XCircle className="h-4 w-4" />
                             Gaps
                         </h4>
                         <ul className="space-y-2">
                             {candidate.gaps.map((gap, i) => (
                                 <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
-                                    <XCircle className="mt-0.5 h-4 w-4 shrink-0 text-amber-500" />
+                                    <XCircle className="mt-0.5 h-4 w-4 shrink-0 text-destructive" />
                                     {gap}
                                 </li>
                             ))}

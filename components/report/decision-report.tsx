@@ -40,10 +40,10 @@ export function DecisionReport({ summary, topRecommendation, comparisonMatrix, a
     return (
         <div className="space-y-8">
             {/* Summary Card */}
-            <Card className="border-0 shadow-lg bg-gradient-to-br from-slate-900 to-slate-800 text-white">
+            <Card className="border-0 shadow-lg bg-gradient-to-br from-primary to-primary/80 text-primary-foreground">
                 <CardContent className="p-8">
                     <div className="mb-6">
-                        <Badge className="bg-emerald-500 text-white border-0 mb-4">
+                        <Badge className="bg-primary-foreground text-primary border-0 mb-4 hover:bg-primary-foreground/90">
                             <CheckCircle2 className="mr-1 h-3 w-3" />
                             Final Recommendation
                         </Badge>
@@ -51,11 +51,11 @@ export function DecisionReport({ summary, topRecommendation, comparisonMatrix, a
                         <p className="text-muted-foreground leading-relaxed">{summary}</p>
                     </div>
                     <div className="rounded-lg bg-white/10 p-4">
-                        <div className="flex items-center gap-2 mb-2 text-sm font-semibold text-emerald-300">
+                        <div className="flex items-center gap-2 mb-2 text-sm font-semibold text-primary-foreground/90">
                             <ArrowRight className="h-4 w-4" />
                             Rationale
                         </div>
-                        <p className="text-sm text-slate-200">{topRecommendation.rationale}</p>
+                        <p className="text-sm text-primary-foreground/80">{topRecommendation.rationale}</p>
                     </div>
                 </CardContent>
             </Card>
@@ -97,7 +97,7 @@ export function DecisionReport({ summary, topRecommendation, comparisonMatrix, a
                 </CardHeader>
                 <CardContent>
                     <div className="relative">
-                        <div className="absolute left-4 top-0 h-full w-0.5 bg-slate-200" />
+                        <div className="absolute left-4 top-0 h-full w-0.5 bg-border" />
                         <div className="space-y-6">
                             {auditTrail.map((entry, i) => (
                                 <div key={i} className="relative flex items-start gap-4 pl-10">
@@ -125,7 +125,7 @@ export function DecisionReport({ summary, topRecommendation, comparisonMatrix, a
             <Card className="border-0 shadow-lg">
                 <CardHeader>
                     <CardTitle className="text-lg flex items-center gap-2">
-                        <ListTodo className="h-5 w-5 text-violet-600" />
+                        <ListTodo className="h-5 w-5 text-primary" />
                         Recommended Next Steps
                     </CardTitle>
                 </CardHeader>
@@ -133,7 +133,7 @@ export function DecisionReport({ summary, topRecommendation, comparisonMatrix, a
                     <ul className="space-y-3">
                         {nextSteps.map((step, i) => (
                             <li key={i} className="flex items-start gap-3 rounded-lg border border-border bg-muted/50 p-3">
-                                <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-violet-100 text-violet-700 text-xs font-bold">
+                                <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary text-xs font-bold">
                                     {i + 1}
                                 </div>
                                 <span className="text-sm text-foreground">{step}</span>

@@ -52,10 +52,10 @@ export function ArchitectureSection() {
                                     {
                                         icon: FileText,
                                         name: "Job Analyzer",
-                                        color: "bg-amber-500",
-                                        lightColor: "bg-amber-50",
-                                        textColor: "text-amber-700",
-                                        borderColor: "border-amber-200",
+                                        color: "bg-secondary",
+                                        lightColor: "bg-secondary/10",
+                                        textColor: "text-secondary",
+                                        borderColor: "border-secondary/20",
                                         input: "Raw JD",
                                         output: "Rubric",
                                     },
@@ -72,20 +72,20 @@ export function ArchitectureSection() {
                                     {
                                         icon: MessageSquare,
                                         name: "Interview Planner",
-                                        color: "bg-emerald-500",
-                                        lightColor: "bg-emerald-50",
-                                        textColor: "text-emerald-700",
-                                        borderColor: "border-emerald-200",
+                                        color: "bg-accent",
+                                        lightColor: "bg-accent/10",
+                                        textColor: "text-accent",
+                                        borderColor: "border-accent/20",
                                         input: "Scores + Gaps",
                                         output: "Questions",
                                     },
                                     {
                                         icon: ClipboardCheck,
                                         name: "Decision Summarizer",
-                                        color: "bg-violet-500",
-                                        lightColor: "bg-violet-50",
-                                        textColor: "text-violet-700",
-                                        borderColor: "border-violet-200",
+                                        color: "bg-muted",
+                                        lightColor: "bg-muted/50",
+                                        textColor: "text-foreground",
+                                        borderColor: "border-border",
                                         input: "All Data",
                                         output: "Report",
                                     },
@@ -119,9 +119,9 @@ export function ArchitectureSection() {
 
                             {/* Output */}
                             <div className="mt-6 text-center">
-                                <div className="inline-flex items-center gap-2 rounded-lg border border-emerald-200 bg-emerald-50 px-6 py-4 shadow-sm">
-                                    <ClipboardCheck className="h-5 w-5 text-emerald-600" />
-                                    <span className="text-sm font-bold text-emerald-800">Final Hiring Report + Audit Trail</span>
+                                <div className="inline-flex items-center gap-2 rounded-lg border border-border bg-muted/50 px-6 py-4 shadow-sm">
+                                    <ClipboardCheck className="h-5 w-5 text-foreground" />
+                                    <span className="text-sm font-bold text-foreground">Final Hiring Report + Audit Trail</span>
                                 </div>
                             </div>
 

@@ -23,7 +23,7 @@ export function ReportSection() {
                     transition={{ duration: 0.5 }}
                     className="mb-12 text-center"
                 >
-                    <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-emerald-200 bg-emerald-50 px-4 py-1.5 text-sm font-medium text-emerald-700">
+                    <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-border bg-accent/10 px-4 py-1.5 text-sm font-medium text-accent">
                         <FileText className="h-4 w-4" />
                         <span>Real Output from Band Pipeline</span>
                     </div>
@@ -54,7 +54,7 @@ export function ReportSection() {
                         className="mx-auto max-w-4xl"
                     >
                         <div className="rounded-xl bg-background p-6 overflow-auto">
-                            <pre className="text-xs text-emerald-400 leading-relaxed">
+                            <pre className="text-xs text-accent leading-relaxed">
                                 {JSON.stringify(hireFlowOutput, null, 2)}
                             </pre>
                         </div>
