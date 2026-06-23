@@ -8,7 +8,7 @@ import Link from "next/link";
 export function HeroSection() {
     return (
         <section className="relative overflow-hidden bg-gradient-to-b from-muted to-white py-20 lg:py-32">
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-primary/10 via-transparent to-transparent" />
+            {/* <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-primary/10 via-transparent to-transparent" /> */}
 
             <div className="container relative mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="mx-auto max-w-4xl text-center">
